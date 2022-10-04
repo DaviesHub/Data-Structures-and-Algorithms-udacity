@@ -24,3 +24,11 @@ class LinkedList():
 
     def append(self, new_node):
         """Function to add a node at the end of the linked list"""
+
+        if self.head:
+            current = self.head
+            while current.next:
+                current = current.next
+            current.next = new_node
+        else:
+            self.head = new_node
